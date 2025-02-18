@@ -1,11 +1,31 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <section class="about-me">
+    <img class="profile-picture" src="https://cdn.bsky.app/img/avatar/plain/did:plc:hek4mwrkeygaffzc7bn4j5vc/bafkreia2dvpcosxbm6f4ixy6sytp7wbpnrn4ybrvpgmvy5vrsyrxpvmgae@jpeg" />
+    <h1 class="text-6xl font-bold">Alex Bradley</h1>
+    <h2 class="text-2xl">Software Engineer</h2>
+    <p>
+      <a href="https://github.com/theabrad">github.com/theabrad</a>
+    </p>
+    <p>
+      <a href="https://bsky.app/profile/alexbradley.dev">Bluesky</a>
+    </p>
+    <p>
+      <a href="https://www.linkedin.com/in/alexrobertbradley/">linkedin.com/in/alexrobertbradley</a>
+    </p>
+    <p>
+      Hi I'm Alex Bradley.
+    <p>
+  </section>
 </Layout>
+
+<style>
+  .profile-picture {
+    border-radius: 50%;
+    height: 15%;
+    width: 15%;
+  }
+</style>
