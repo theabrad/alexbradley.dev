@@ -1,0 +1,25 @@
+---
+import SocialLink from './SocialLink.astro'
+---
+
+<section class="about-me content-center mt-10">
+  <img class="profile-picture" src="https://cdn.bsky.app/img/avatar/plain/did:plc:hek4mwrkeygaffzc7bn4j5vc/bafkreia2dvpcosxbm6f4ixy6sytp7wbpnrn4ybrvpgmvy5vrsyrxpvmgae@jpeg" alt="profile of me"/>
+  <h1 class="text-6xl font-bold">Alex Bradley</h1>
+  <h2 class="text-2xl">Software Engineer</h2>
+  <ul>
+    <li class="mt-2"><SocialLink link="https://github.com/theabrad" title="Github"/></li>
+    <li class="mt-2"><SocialLink link="https://bsky.app/profile/alexbradley.dev" title="Bluesky"/></li>
+    <li class="mt-2"><SocialLink link="https://www.linkedin.com/in/alexrobertbradley/" title="LinkedIn"/></li>
+  <ul>
+  <p class="mt-2 text-xl">
+    Hi I'm Alex Bradley.
+  <p>
+</section>
+
+<style>
+  .profile-picture {
+    border-radius: 50%;
+    height: 15%;
+    width: 15%;
+  }
+</style>

@@ -1,27 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AboutMe from '../components/AboutMe.astro'
 ---
 
 <Layout>
-  <section class="about-me mt-10">
-    <img class="profile-picture" src="https://cdn.bsky.app/img/avatar/plain/did:plc:hek4mwrkeygaffzc7bn4j5vc/bafkreia2dvpcosxbm6f4ixy6sytp7wbpnrn4ybrvpgmvy5vrsyrxpvmgae@jpeg" />
-    <h1 class="text-6xl font-bold">Alex Bradley</h1>
-    <h2 class="text-2xl">Software Engineer</h2>
-    <ul>
-      <li><a href="https://github.com/theabrad">Github</a></li>
-      <li><a href="https://bsky.app/profile/alexbradley.dev">Bluesky</a></li>
-      <li><a href="https://www.linkedin.com/in/alexrobertbradley/">LinkedIn</a></li>
-    <ul>
-    <p>
-      Hi I'm Alex Bradley.
-    <p>
-  </section>
+  <AboutMe />
 </Layout>
 
-<style>
-  .profile-picture {
-    border-radius: 50%;
-    height: 15%;
-    width: 15%;
-  }
-</style>
