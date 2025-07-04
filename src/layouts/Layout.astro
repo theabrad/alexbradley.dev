@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+const { title = "Alex Bradley", description = "A website for Alex Bradley." } = Astro.props;
 ---
 
 <!doctype html>
@@ -9,23 +10,13 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Alex Bradley</title>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	</head>
 	<body class="border-t-5 border-indigo-400">
-    <section>
-      <slot />
-    </section>
+        <slot />
 	</body>
 </html>
-
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-	html,
-	body {
-		margin: auto;
-		width: 100%;
-		height: 100%;
-    font-family: "Lato", serif;
-    font-style: normal;
-	}
-</style>

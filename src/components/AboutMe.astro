@@ -1,5 +1,11 @@
 ---
 import SocialLink from './SocialLink.astro'
+
+const socialLinks = [
+  { href: "https://github.com/theabrad", title: "Github" },
+  { href: "https://bsky.app/profile/alexbradley.dev", title: "Bluesky" },
+  { href: "https://www.linkedin.com/in/alexrobertbradley/", title: "LinkedIn" },
+];
 ---
 
 <article class="mx-auto prose prose-lg dark:prose-invert">
@@ -7,12 +13,14 @@ import SocialLink from './SocialLink.astro'
   <h1>Alex Bradley</h1>
   <h2>Software Engineer</h2>
   <ul>
-    <li class="mt-2"><SocialLink link="https://github.com/theabrad" title="Github"/></li>
-    <li class="mt-2"><SocialLink link="https://bsky.app/profile/alexbradley.dev" title="Bluesky"/></li>
-    <li class="mt-2"><SocialLink link="https://www.linkedin.com/in/alexrobertbradley/" title="LinkedIn"/></li>
+    {socialLinks.map((link) => (
+      <li class="mt-2">
+        <SocialLink link={link.href} title={link.title} />
+      </li>
+    ))}
   </ul>
   <p>
-    Hi there! I'm Alex Bradley, a Software Engineer with years of experience crafting innovate solutions across a variety of projects. I currently work at <SocialLink link="https://fearless.tech" title="Fearless" />.
+    Hi there! I'm Alex Bradley, a Software Engineer with years of experience crafting innovate solutions across a variety of projects. I currently work at <SocialLink link="https://fearless.tech" title="Fearless" /> where I have been working with GSA TTS on <SocialLink link="https://login.gov" title="Login.gov" />.
   <p>
 </article>
 
