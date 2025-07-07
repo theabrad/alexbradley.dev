@@ -11,10 +11,9 @@ const socialLinks = [
 <article class="mx-auto prose prose-lg dark:prose-invert">
   <img class="profile-picture" src="https://cdn.bsky.app/img/avatar/plain/did:plc:hek4mwrkeygaffzc7bn4j5vc/bafkreia2dvpcosxbm6f4ixy6sytp7wbpnrn4ybrvpgmvy5vrsyrxpvmgae@jpeg" alt="profile of me"/>
   <h1>Alex Bradley</h1>
-  <h2>Software Engineer</h2>
-  <ul>
+  <ul class="list-none flex flex-row gap-x-3">
     {socialLinks.map((link) => (
-      <li class="mt-2">
+      <li class="px-1">
         <SocialLink link={link.href} title={link.title} />
       </li>
     ))}
@@ -29,5 +28,8 @@ const socialLinks = [
     border-radius: 50%;
     height: 15%;
     width: 15%;
+  }
+  ul {
+    padding-left: 0;
   }
 </style>

@@ -2,4 +2,18 @@
 const {link, title} = Astro.props;
 ---
 
-<a class="underline text-indigo-400 hover:text-indigo-600 visited:text-indigo-600" href={link} target="_blank" rel="noopener noreferrer">{title}</a>
+<a class="text-indigo-400 hover:text-indigo-600 visited:text-indigo-600" href={link} target="_blank" rel="noopener noreferrer">
+  {title === "Github" && <i class="fa-brands fa-github mr-2"></i>}
+  {title === "Bluesky" && <i class="fa-solid fa-cloud mr-2"></i>}
+  {title === "LinkedIn" && <i class="fa-brands fa-linkedin mr-2"></i>}
+  {title}
+</a>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
