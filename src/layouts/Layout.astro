@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
 const { title = "Alex Bradley", description = "A website for Alex Bradley." } = Astro.props;
 ---
 
@@ -18,6 +19,13 @@ const { title = "Alex Bradley", description = "A website for Alex Bradley." } = 
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	</head>
 	<body class="border-t-5 border-indigo-400">
-        <slot />
+    <Navigation />
+    <slot />
 	</body>
 </html>
+
+<style>
+  body {
+    background-color: black;
+  }
+</style>
